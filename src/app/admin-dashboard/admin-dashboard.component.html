@@ -1,0 +1,131 @@
+<div class="container">
+    <h3 class="text-danger text-center">Your Products</h3>
+    <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6 mb-2">
+			<div class="card border border-white shadow-lg">
+                <img src="../../assets/images/imagePlaceholder1.png" class="card-img-top" alt="">
+                <div class="card-body">
+                    <div class="text-center">
+                        <button data-bs-toggle="modal" data-bs-target="#addProductModal" class="btn btn-lg btn-danger"><i class="fas fa-plus"></i>&nbsp;Add Product</button>
+                    </div>
+                </div>
+            </div>
+		</div>   
+        <div class="col-lg-3 col-md-6 col-sm-6 mb-2" *ngFor = "let product of products">
+			<div class="card border border-white">
+                <img src="../../assets/images/{{product.imageName}}" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h6 class="text-muted">{{product.type}}</h6>
+                    <small class="text-success">ksh {{product.price}}</small>
+                    <h5 class="card-title">{{product.name}}</h5>
+                    <div class="d-grid gap-2 d-md-block">
+                        <button data-bs-toggle="modal" data-bs-target="#editProductModal" class="btn btn-outline-secondary me-md-1"><i class="fas fa-edit"></i>&nbsp;Edit</button>
+                        <button class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i>&nbsp;Delete</button>
+                    </div>
+                </div>
+            </div>
+		</div>   
+    </div>
+</div>
+
+<!--Add Product Modal -->
+<div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-danger" id="exampleModalLabel">Add Product Here</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form class="row g-">
+                <div class="col-md-6">
+                    <label class="form-label">Product Name</label>
+                    <input type="text" class="form-control" placeholder="product ABC">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Product Type</label>
+                  <select class="form-select">
+                    <option selected>Choose...</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="clothes">Clothes</option>
+                    <option value="accessories">Accessories</option>
+                    <option value="shoes">Shoes</option>
+                    <option value="stationery">Stationery</option>
+                    <option value="utensils">Utensils</option>
+                    <option value="furniture">Furniture</option>
+                    <option value="tools">Tools</option>
+                    <option value="games">Games</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Image Name</label>
+                  <input type="text" class="form-control" placeholder="picexample.png">
+                </div>
+                <div class="col-md-6">
+                  <label for="" class="form-label">Product Price(Ksh)</label>
+                  <input type="number" placeholder="2000" class="form-control">
+                </div>
+                <div class="col-md-12">
+                    <label class="form-label">Product Description</label>
+                    <textarea class="form-control" placeholder="Add a description here..." cols="30" rows="10"></textarea>
+                </div>
+                <div class="modal-footer mt-2">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-outline-success"><i class="fas fa-check"></i>&nbsp;Save</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+</div>
+
+  <!--Edit Product Modal -->
+<div class="modal fade" id="editProductModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-danger" id="exampleModalLabel">Edit Product Here</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="row g-">
+              <div class="col-md-6">
+                  <label class="form-label">Product Name</label>
+                  <input type="text" class="form-control" placeholder="product ABC">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Product Type</label>
+                <select class="form-select">
+                  <option selected>Choose...</option>
+                  <option value="electronics">Electronics</option>
+                  <option value="clothes">Clothes</option>
+                  <option value="accessories">Accessories</option>
+                  <option value="shoes">Shoes</option>
+                  <option value="stationery">Stationery</option>
+                  <option value="utensils">Utensils</option>
+                  <option value="furniture">Furniture</option>
+                  <option value="tools">Tools</option>
+                  <option value="games">Games</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Image Name</label>
+                <input type="text" class="form-control" placeholder="picexample.png">
+              </div>
+              <div class="col-md-6">
+                <label for="" class="form-label">Product Price(Ksh)</label>
+                <input type="number" placeholder="2000" class="form-control">
+              </div>
+              <div class="col-md-12">
+                  <label class="form-label">Product Description</label>
+                  <textarea class="form-control" placeholder="Add a description here..." cols="30" rows="10"></textarea>
+              </div>
+              <div class="modal-footer mt-2">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-outline-success"><i class="fas fa-check"></i>&nbsp;Save changes</button>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>

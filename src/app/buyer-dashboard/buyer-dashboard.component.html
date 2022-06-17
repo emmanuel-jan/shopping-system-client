@@ -1,0 +1,73 @@
+<!-- Start of the carousel section -->
+<div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+        <img src="../../assets/images/pic1.jpg" class="d-block w-100" alt="...">
+
+        <div class="container">
+            <div class="carousel-caption text-start">
+            <h1>Best Products & Brands in our store</h1>
+            <p>Some representative placeholder content for the first slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-danger" href="#">Sign up today</a></p>
+            </div>
+        </div>
+        </div>
+        <div class="carousel-item">
+        <img src="../../assets/images/pic3.jpg" class="d-block w-100" alt="..." width="100%" height="100%">
+
+        <div class="container">
+            <div class="carousel-caption">
+            <h1>Another example headline.</h1>
+            <p>Some representative placeholder content for the second slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-danger" href="#">Learn more</a></p>
+            </div>
+        </div>
+        </div>
+        <div class="carousel-item">
+        <img src="../../assets/images/pic2.jpg" class="d-block w-100" alt="..." width="100%" height="100%">
+
+        <div class="container">
+            <div class="carousel-caption text-start">
+            <h1>One more for good measure.</h1>
+            <p>Some representative placeholder content for the third slide of this carousel.</p>
+            <p><a class="btn btn-lg btn-danger" href="#">Browse gallery</a></p>
+            </div>
+        </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<!-- end of the carousel section -->
+
+<div class="container">
+    <h3 class="text-danger">New Products</h3>
+    <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6 mb-2" *ngFor = "let product of products">
+			<div class="card border border-white">
+                <img src="../../assets/images/{{product.imageName}}" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h6 class="text-muted">{{product.type}}</h6>
+                    <small class="text-success">ksh {{product.price}}</small>
+                    <h5 class="card-title">{{product.name}}</h5>
+                    <div class="gap-2 d-grid d-md-block">
+                        <button routerLink="/product/{{product.id}}" class="btn btn-outline-danger me-1"><i class="fas fa-arrows-alt"></i></button>
+                        <button routerLink="/product/1" class="btn btn-outline-danger">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+		</div>   
+    </div>
+</div>
+<br> <br>

@@ -1,5 +1,89 @@
-<nav class="navbar navbar-dark bg-danger">
+<!-- <nav class="navbar navbar-dark bg-danger">
     <div class="container-fluid">
         <a href="#" class="navbar-brand">Janica</a>
     </div>
-</nav>
+</nav> -->
+
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/dashboard">Janica</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-secondary" type="submit">Search</button>
+        </form>
+        <button class="btn btn-secondary mx-1" type="submit">My Cart</button>
+      </div>
+    </div>
+  </nav> -->
+
+  <header class="section-header">	
+	<section class="header-main">
+		<div class="container-fluid bg-danger">
+			<div class="row gy-3 align-items-center p-2">
+				<div class="col-lg-2 col-sm-4 col-4">
+					<a class="navbar-brand text-white" routerLink="/dashboard">Janica</a>
+				</div>
+				<div class="order-lg-last col-lg-5 col-sm-8 col-8">
+					<div class="float-end">
+              <a href="#" class="btn btn-danger"> 
+						    <i class="fa fa-user"></i>  <span class="ms-1 d-none d-sm-inline-block">John Doe </span> 
+						  </a>
+              <button data-bs-toggle="offcanvas" href="#offcanvas_cart" class="btn btn-danger"> 
+                <i class="fa fa-shopping-cart"></i><span class="ms-1">My cart </span> 
+              </button>
+              <a href="#" class="btn btn-danger"> 
+						    <i class="fas fa-sign-out-alt"></i><span class="ms-1 d-none d-sm-inline-block">Logout </span> 
+						  </a>
+			    </div>
+				</div> <!-- col end.// -->
+				<div class="col-lg-5 col-md-12 col-12">
+					<form action="#" class="">
+		              <div class="input-group">
+		                <input type="search" class="form-control" style="width:5%" placeholder="Search">
+		                <select class="form-select">
+		                  <option value="">All Categories</option>
+                          <option value="electronics">Electronics</option>
+                          <option value="clothes">Clothes</option>
+                          <option value="accessories">Accessories</option>
+                          <option value="shoes">Shoes</option>
+                          <option value="stationery">Stationery</option>
+                          <option value="utensils">Utensils</option>
+                          <option value="furniture">Furniture</option>
+                          <option value="tools">Tools</option>
+                          <option value="games">Games</option>
+		                </select>
+		                <button class="btn btn-secondary">
+		                  <i class="fa fa-search"></i> 
+		                </button>
+		              </div> <!-- input-group end.// -->
+		            </form>
+				</div> <!-- col end.// -->
+				
+			</div> <!-- row end.// -->
+		</div> <!-- container end.// -->
